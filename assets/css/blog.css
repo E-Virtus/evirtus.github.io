@@ -71,17 +71,17 @@ main {
   color: cyan;
   border-bottom: 1px solid cyan;
 }
-#social-wrapper {
+.social-wrapper {
   margin-top: 1rem;
 }
-#social-wrapper img {
+.social-wrapper i {
   filter: invert() !important;
   width: 25px;
   height: 25px;
   margin: 0 0 0.3rem 0;
   transition: all 0.2s ease-in-out;
 }
-#social-wrapper img:hover {
+.social-wrapper i:hover {
   transform: scale(1.2);
 }
 
@@ -101,7 +101,7 @@ main {
 .articles .article .article-title,
 .articles .article .article-title a {
   color: var(--white-2);
-  font-weight: 100;
+  font-weight: bold;
   font-style: normal;
   font-size: 1.4rem;
   line-height: 130%;
