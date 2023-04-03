@@ -19,7 +19,7 @@
             {% endfor %}
           </div>
           <small class="date"
-            >{{post.date | date_to_string}} {% assign author =
+            >{{post.date | date_to_string}} &#8226; {% assign author =
             site.data.author[post.author] %} {% if author %}
             <!-- Personal Info. -->
             Autor: <a href="{{ author.web }}">{{ author.name }}</a>

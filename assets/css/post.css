@@ -236,3 +236,61 @@ main a {
     padding: 1.5rem;
   }
 }
+
+/* Share icons */
+#share {
+  width: 100%;
+  margin: 10px auto;
+  text-align: left;
+}
+
+/* buttons */
+
+#share a {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin: 8px 2px;
+  border-radius: 35%;
+  font-size: 18px;
+  background: var(--white-2);
+  color: var(--gray-4);
+  opacity: 0.75;
+  transition: opacity 0.15s linear;
+  text-align: center;
+}
+
+#share a:hover {
+  opacity: 1;
+}
+
+/* icons */
+
+#share i {
+  position: relative;
+  top: 33%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+/* colors */
+
+.facebook {
+  background: #3b5998;
+}
+
+.twitter {
+  background: #55acee;
+}
+
+.googleplus {
+  background: #dd4b39;
+}
+
+.linkedin {
+  background: #0077b5;
+}
+
+.pinterest {
+  background: #cb2027;
+}
