@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,300;0,400;0,800;1,100;1,300;1,400;1,800&display=swap");
 
 :root {
+  --so-primary: #2d36da;
   --gray-1: #3f3f3f;
   --gray-2: #32353a;
   --gray-3: #25282c;
@@ -31,7 +32,9 @@ body {
   background-color: var(--gray-5);
 }
 header {
-  padding: 2rem 0 4rem 0;
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
 }
 header .site-title {
   font-size: 2.5rem;
@@ -41,12 +44,17 @@ header .site-title {
 }
 img.logo {
   vertical-align: middle;
-  margin-right: 20px;
 }
 main {
   margin: 0 auto;
   max-width: 650px;
-  padding: 3rem 0;
+  padding: 3rem 0 0 0;
+}
+main a {
+  color: var(--so-primary);
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
 }
 
 /* header */
@@ -129,6 +137,20 @@ main {
   padding: 0 0.8rem;
   line-height: 1.3rem;
   cursor: pointer;
+}
+/* footer section*/
+.footer-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+.footer-section p a {
+  color: var(--gray-1);
+  transition: 0.3s all;
+}
+.footer-section p a:hover {
+  color: var(--white-1);
 }
 /* media query */
 

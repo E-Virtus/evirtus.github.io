@@ -4,8 +4,8 @@
   <!-- Look the author details up from the site config. -->
   {% assign author = site.data.author[page.author] %}
   <body>
+    {% include header.html %}
     <main>
-      {% include header.html %}
       <section class="article">
         <div class="article-header">
           <h2 class="article-title">{{page.title}}</h2>
