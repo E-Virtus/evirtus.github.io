@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,300;0,400;0,800;1,100;1,300;1,400;1,800&display=swap");
 
 :root {
+  --so-primary: #2d36da;
+  --so-secondary: #2d36da;
   --gray-1: #3f3f3f;
   --gray-2: #32353a;
   --gray-3: #25282c;
@@ -35,7 +37,9 @@ body {
   border-bottom: 1px solid cyan;
 }
 header {
-  padding: 2rem 0 4rem 0;
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
 }
 .site-title {
   font-size: 1.4rem;
@@ -50,7 +54,14 @@ img.logo {
 main {
   margin: 0 auto;
   max-width: 650px;
-  padding: 3rem 0 4rem 0;
+  padding: 3rem 0 0 0;
+}
+
+main a {
+  color: var(--so-primary);
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
 }
 .article {
   margin-bottom: 3rem;
