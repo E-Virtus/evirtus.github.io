@@ -108,7 +108,10 @@ main a {
   border-radius: 50%;
   display: flex;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
 .go-back:hover {
@@ -116,8 +119,8 @@ main a {
   color: var(--so-secondary);
 }
 .go-back img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   margin-right: 1rem;
 }
 .article {
