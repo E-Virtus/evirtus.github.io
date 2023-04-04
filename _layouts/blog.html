@@ -2,15 +2,17 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    {% include header.html %} {% include bio.html %}
+    {% include header.html %}
     <main>
+      <h1 class="title">E-Virtus | Blog</h1>
+      {% include bio.html %}
       <section class="articles">
         {% for post in site.posts %}
         <article class="article">
           <h2 class="article-title">
             <a href="{{site.baseurl}}{{post.url}}"> {{post.title}} </a>
           </h2>
-          <small> {{ post.excerpt | truncatewords:30}} </small>
+          <small> {{ post.excerpt | truncatewords:25}} </small>
           <div class="categories">
             {% for c in post.categories %}
             <a href="#!" data-base-url="{{site.baseurl}}" class="category"
@@ -29,6 +31,7 @@
         {%endfor%}
       </section>
     </main>
-    {% include footer.html %} {% include category-modal.html%}
+    {% include scrollTop.html %} {% include footer.html %} {% include
+    category-modal.html%}
   </body>
 </html>
