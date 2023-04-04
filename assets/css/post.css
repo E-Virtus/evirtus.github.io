@@ -291,6 +291,23 @@ main a {
   background-color: black;
   border: 2px solid white;
 }
+.content-scrollTop {
+  width: 100%;
+  position: relative;
+}
+#scroll-top {
+  position: fixed;
+  right: 50px;
+  bottom: 20px;
+  background-color: var(--white-2);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: none;
+}
+#scroll-top img {
+  width: 40px;
+  height: 40px;
+}
 
 /* footer section*/
 .footer-section {
