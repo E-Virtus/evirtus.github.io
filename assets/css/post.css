@@ -36,10 +36,12 @@ body {
   color: cyan;
   border-bottom: 1px solid cyan;
 }
-header {
+nav {
   padding: 2rem;
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 .site-title {
   font-size: 1.4rem;
@@ -47,6 +49,42 @@ header {
   line-height: 110%;
   color: var(--white-1);
 }
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  display: flex;
+  gap: 0 20px;
+}
+nav ul li {
+  font-size: 1.2rem;
+  color: var(--white-2);
+}
+nav ul li a {
+  color: var(--white-2);
+  transition: 0.5s all;
+}
+nav ul li:last-child {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 35%;
+  font-size: 18px;
+  background: var(--white-2);
+  color: var(--gray-4);
+  opacity: 0.75;
+  transition: 0.5s all;
+  text-align: center;
+}
+nav ul li a:hover {
+  color: var(--so-primary);
+}
+nav ul li:last-child:hover {
+  background: var(--so-primary);
+}
+
 img.logo {
   vertical-align: middle;
   margin-right: 20px;
@@ -86,7 +124,7 @@ main a {
   margin-bottom: 3rem;
 }
 
-.article-header {
+.article-nav {
   margin-bottom: 2rem;
 }
 .article-title {
