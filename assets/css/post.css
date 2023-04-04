@@ -306,11 +306,6 @@ main a {
 .footer-section p a:hover {
   color: var(--white-1);
 }
-@media screen and (max-width: 750px) {
-  body {
-    padding: 1.5rem;
-  }
-}
 
 /* Share icons */
 #share {
@@ -383,4 +378,58 @@ main a {
 }
 .footer-section p a:hover {
   color: var(--white-1);
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1.5rem;
+  }
+  nav {
+    width: 90%;
+    margin: 0 auto;
+  }
+  nav ul {
+    justify-content: end;
+  }
+}
+@media screen and (max-width: 550px) {
+  nav .site-title {
+    font-size: 3rem;
+  }
+  nav ul {
+    justify-content: end;
+  }
+}
+@media screen and (max-width: 440px) {
+  #img-wrapper img {
+    max-width: 50px;
+  }
+  #bio {
+    align-items: flex-start;
+  }
+  main,
+  .articles {
+    padding: 0;
+    margin: 0;
+  }
+  main {
+    padding-bottom: 1rem;
+  }
+  .articles {
+    margin: 2rem 0 3rem 0;
+    row-gap: 1.2rem;
+  }
+  nav {
+    width: 100%;
+    padding: 0 0 2rem 0;
+  }
+
+  nav .site-title {
+    font-size: 2.4rem;
+  }
+  nav ul {
+    justify-content: end;
+  }
+  nav ul li {
+    font-size: 0.8rem;
+  }
 }
