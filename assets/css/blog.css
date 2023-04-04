@@ -227,15 +227,7 @@ main a {
   nav ul {
     justify-content: end;
   }
-  #scroll-top {
-    position: fixed;
-    right: 50px;
-    bottom: 20px;
-    background-color: var(--white-2);
-    padding: 0.5rem;
-    border-radius: 50%;
-    display: none;
-  }
+
   #scroll-top img {
     width: 30px;
     height: 30px;
