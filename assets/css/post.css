@@ -2,7 +2,7 @@
 
 :root {
   --so-primary: #2d36da;
-  --so-secondary: #2d36da;
+  --so-secondary: #4b51ce;
   --gray-1: #3f3f3f;
   --gray-2: #32353a;
   --gray-3: #25282c;
@@ -62,6 +62,25 @@ main a {
   font-weight: bold;
   letter-spacing: 2px;
   font-size: 0.8rem;
+}
+.go-back {
+  left: 50px;
+  background-color: transparent;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.go-back:hover {
+  transition: 1s all;
+  color: var(--so-secondary);
+}
+.go-back img {
+  width: 30px;
+  height: 30px;
+  margin-right: 1rem;
 }
 .article {
   margin-bottom: 3rem;
@@ -231,6 +250,20 @@ main a {
   border: 2px solid white;
 }
 
+/* footer section*/
+.footer-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+.footer-section p a {
+  color: var(--gray-1);
+  transition: 0.3s all;
+}
+.footer-section p a:hover {
+  color: var(--white-1);
+}
 @media screen and (max-width: 750px) {
   body {
     padding: 1.5rem;

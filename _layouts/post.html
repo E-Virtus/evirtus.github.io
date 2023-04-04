@@ -6,6 +6,7 @@
   <body>
     {% include header.html %}
     <main>
+      {% include backTo.html %}
       <section class="article">
         <div class="article-header">
           <h2 class="article-title">{{page.title}}</h2>
@@ -66,8 +67,8 @@
         </div>
         <div class="content">{{content}}</div>
       </section>
-      {% include footer.html %}
     </main>
-    {% include category-modal.html%}
+    {% include scrollTop.html %} {% include footer.html %} {% include
+    category-modal.html%}
   </body>
 </html>
