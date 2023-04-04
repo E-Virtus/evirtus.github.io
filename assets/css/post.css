@@ -54,7 +54,7 @@ img.logo {
 main {
   margin: 0 auto;
   max-width: 650px;
-  padding: 3rem 0 0 0;
+  padding: 2rem 0 0 0;
 }
 
 main a {
@@ -85,6 +85,7 @@ main a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+  margin-top: 0.5rem;
 }
 .categories .category {
   margin: 0 0.5rem 0 0;
@@ -293,4 +294,19 @@ main a {
 
 .pinterest {
   background: #cb2027;
+}
+
+/* footer section*/
+.footer-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+.footer-section p a {
+  color: var(--gray-1);
+  transition: 0.3s all;
+}
+.footer-section p a:hover {
+  color: var(--white-1);
 }

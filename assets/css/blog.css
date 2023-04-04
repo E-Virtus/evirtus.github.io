@@ -48,7 +48,7 @@ img.logo {
 main {
   margin: 0 auto;
   max-width: 650px;
-  padding: 3rem 0 0 0;
+  padding: 2rem 0 0 0;
 }
 main a {
   color: var(--so-primary);
@@ -127,6 +127,10 @@ main a {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+.categories {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 .articles .article .categories .category {
   margin: 0 0.5rem 0.3rem 0;
   display: block;
@@ -201,4 +205,12 @@ main a {
   .articles .article .article-title a {
     font-size: 1rem;
   }
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.site-description {
+  line-height: 1.5rem;
 }
