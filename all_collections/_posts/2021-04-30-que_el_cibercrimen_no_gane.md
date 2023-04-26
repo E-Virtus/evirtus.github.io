@@ -2,7 +2,7 @@
 author: sebastian_yoma
 layout: post
 title: ¡Que el Cibercrimen NO GANE!
-date: 2023-04-26
+date: 2021-04-30
 categories: [Ciberseguridad, Plan Estrategico, Transformación Digital]
 ---
 

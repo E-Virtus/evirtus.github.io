@@ -2,7 +2,7 @@
 author: sebastian_yoma
 layout: post
 title: Minería cada vez más digital
-date: 2023-04-26
+date: 2021-05-06
 categories:
   [
     Ciberseguridad,

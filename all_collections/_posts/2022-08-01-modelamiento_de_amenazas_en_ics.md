@@ -2,7 +2,7 @@
 author: hector_norambuena
 layout: post
 title: Modelamiento de amenazas en ICS
-date: 2023-04-26
+date: 2022-08-01
 categories: [Ciberseguridad, ICS, Ciberseguridad industrial, IEC_62443]
 ---
 

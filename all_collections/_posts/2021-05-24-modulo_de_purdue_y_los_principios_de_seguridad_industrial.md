@@ -2,7 +2,7 @@
 author: hector_norambuena
 layout: post
 title: Modelo de Purdue y los Principios de Ciberseguridad Industrial
-date: 2023-04-26
+date: 2021-05-24
 categories:
   [Ciberseguridad industrial, ICS, Industria_4_0, ISA_95, ISA_99, IEC_62443]
 ---

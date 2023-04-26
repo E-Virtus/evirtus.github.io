@@ -2,7 +2,7 @@
 author: sebastian_yoma
 layout: post
 title: Defendiendo procesos ICS
-date: 2023-04-26
+date: 2021-04-30
 categories: [OT Mining, loT, ICS, NERC CIP]
 ---
 
