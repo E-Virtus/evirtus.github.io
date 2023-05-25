@@ -3,10 +3,14 @@
   --gray-2: #32353a;
   --gray-3: #25282c;
   --gray-4: #151618;
-  --gray-5: #151618;
+  --gray-5: #171840;
   --gray-6: #111111;
   --white-1: #eeeeee;
   --white-2: #a9abb3;
+  --cyan-1: rgb(126 147 190 / 0.1);
+  --cyan-2: rgb(126 147 190 / 0.4);
+  --tw-text-opacity: 1;
+  --cerise-1: rgb(197 87 117 / var(--tw-text-opacity));
 }
 #category-modal-bg {
   position: fixed;
@@ -31,7 +35,7 @@
   border-radius: 1rem;
   padding: 1rem;
   margin: auto;
-  background: var(--gray-3);
+  background: #171840e5;
   display: none;
   visibility: hidden;
   line-height: 140%;
@@ -65,7 +69,8 @@
   font-size: 0.8rem;
 }
 .modal-article:hover {
-  background: var(--gray-4);
+  background: var(--cyan-2);
+  border-radius: 10px;
 }
 
 hr {
