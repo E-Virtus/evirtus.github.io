@@ -25,7 +25,8 @@
             >{{post.date | date_to_string}} &#8226; {% assign author =
             site.data.author[post.author] %} {% if author %}
             <!-- Personal Info. -->
-            Autor: <a>{{ author.name }}</a>
+            Autor:
+            <a href="{{author.linkedin}}" target="_blank">{{ author.name }}</a>
             {% endif %} {{page.date | date_to_string}}
           </small>
         </article>

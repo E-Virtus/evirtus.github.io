@@ -14,7 +14,7 @@
           <small class="date">
             {% if author %}
             <!-- Personal Info. -->
-            Escrito por <a href="{{ author.web }}">{{ author.name }}</a>
+            Escrito por <a href="{{author.linkedin}}" target="_blank"">{{ author.name }}</a>
             {% endif %} &#8226; {{page.date | date_to_string}}
           </small>
 
