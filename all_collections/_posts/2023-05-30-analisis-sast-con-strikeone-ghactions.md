@@ -3,7 +3,7 @@ author: alejandro_hermosilla
 layout: post
 title: Análisis SAST en GitHub Actions con StrikeOne
 date: 2023-05-30
-categories: [DevSecOps, CI/CD, SAST]
+categories: [DevSecOps, CI/CD, SAST, StrikeOne]
 ---
 
 Dentro del ciclo DevSecOps es importante el uso de un CI/CD para poder agilizar las integraciones y despliegues de un proyecto, pero también es importante tener un nivel de seguridad dentro del código donde se tienen que cumplir ciertos estándares a nivel organizacional como a nivel general del código.
