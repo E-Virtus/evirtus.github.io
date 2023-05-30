@@ -13,9 +13,10 @@ El análisis **SAST**, o bien **"Análisis de código estático"**, son las prue
 En StrikeOne es posible realizar este análisis, invocando dentro de un pipeline del CI/CD que esté ocupando tu organización, ya sea; GitHub Actions, GitLab CI/CD, Azure DevOps, Bitbucket pipelines, Jenkins, entre otros...
 
 Herramientas disponibles en StrikeOne
-| Secrets | SCA | SAST | DAST |
-|--|--|--|--|
-| GitLeaks | OWASP Dependency-Check | SonarQube, Horusec | OWASP ZAP, OpenVAS, Nuclei
+
+| Secrets  | SCA                    | SAST               | DAST                       |
+| -------- | ---------------------- | ------------------ | -------------------------- |
+| GitLeaks | OWASP Dependency-Check | SonarQube, Horusec | OWASP ZAP, OpenVAS, Nuclei |
 
 En primera instancia nos logueamos dentro de StrikeOne con nuestras credenciales.
 ![Login StrikeOne](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_login_26_05_2023.png)
@@ -48,6 +49,7 @@ Ahora podemos configurar nuestro pipeline dentro de GitHub Actions:
   ![Nuevo workflow GHActions](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_new_action_26_05_2023.png)
 
 - Insertamos el siguiente pipeline
+
 ```
 name: StrikeOne Scan
 
@@ -102,7 +104,7 @@ Resultado en StrikeOne:
 Lista de vulnerabilidades (visión general):
 ![Lista de vulnerabilidades](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_list_vulns_25_05_2023.png)
 
-Una vez teniendo los resultados y las vulnerabilidades encontradas, es hora de priorizar las vulnerabilidades, según su severidad e impacto. Por ejemplo las vulnerabilidades de severidad Crítica y/o Alta deberían remediarse lo antes posible, comúnmente se pre-define un SLA. 
+Una vez teniendo los resultados y las vulnerabilidades encontradas, es hora de priorizar las vulnerabilidades, según su severidad e impacto. Por ejemplo las vulnerabilidades de severidad Crítica y/o Alta deberían remediarse lo antes posible, comúnmente se pre-define un SLA.
 
 Podemos priorizar la vulnerabilidad deseada, una vez haya sido confirmada dentro del código.
 ![Modificar Vulnerabilidad](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_mod_vuln_26_05_2023.png)
