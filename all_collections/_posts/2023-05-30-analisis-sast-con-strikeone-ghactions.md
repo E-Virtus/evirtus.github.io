@@ -18,6 +18,8 @@ Herramientas disponibles en StrikeOne
 | -------- | ---------------------- | ------------------ | -------------------------- |
 | GitLeaks | OWASP Dependency-Check | SonarQube, Horusec | OWASP ZAP, OpenVAS, Nuclei |
 
+## ¿Cómo ejecutar un test con StrikeOne?
+
 En primera instancia nos logueamos dentro de StrikeOne con nuestras credenciales.
 ![Login StrikeOne](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_login_26_05_2023.png)
 
@@ -79,7 +81,7 @@ jobs:
         echo ${{ steps.strikeone_test_execution.outputs.response }}
 ```
 
-Desglose:
+### Desglose:
 
 - parsedDomainId: ID perteneciente al dominio ingresado en StrikeOne. ![parsedDomainId](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_id_domain_26_05_2023.png)
 - parsedScanId: ID perteneciente al scan ingresado en StrikeOne. ![parsedScanId](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_id_scan_26_05_2023.png)
@@ -103,6 +105,8 @@ Resultado en StrikeOne:
 
 Lista de vulnerabilidades (visión general):
 ![Lista de vulnerabilidades](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_list_vulns_25_05_2023.png)
+
+## Priorizando vulnerabilidades
 
 Una vez teniendo los resultados y las vulnerabilidades encontradas, es hora de priorizar las vulnerabilidades, según su severidad e impacto. Por ejemplo las vulnerabilidades de severidad Crítica y/o Alta deberían remediarse lo antes posible, comúnmente se pre-define un SLA.
 
