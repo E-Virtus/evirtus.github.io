@@ -6,7 +6,7 @@ date: 2023-05-30
 categories: [DevSecOps, CI/CD, SAST, StrikeOne]
 ---
 
-Contenido:
+**Contenido**:
 
 - [Introducción](#introducción)
 - [Herramientas disponibles en StrikeOne](#herramientas-disponibles-en-strikeone)
