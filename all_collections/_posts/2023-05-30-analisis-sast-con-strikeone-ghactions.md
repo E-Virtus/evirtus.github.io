@@ -6,13 +6,34 @@ date: 2023-05-30
 categories: [DevSecOps, CI/CD, SAST, StrikeOne]
 ---
 
+Contenido:
+
+- [Introducción](#introducción)
+- [Herramientas disponibles en StrikeOne](#herramientas-disponibles-en-strikeone)
+- [¿Cómo ejecutar un test con StrikeOne?](#cómo-ejecutar-un-test-con-strikeone)
+  - [Login](#login)
+  - [Lista de Assets](#lista-de-assets)
+  - [Nuevo Asset](#nuevo-asset)
+  - [Ver datalles Asset](#ver-datalles-asset)
+  - [Nuevo dominio](#nuevo-dominio)
+  - [Nuevo Scan](#nuevo-scan)
+  - [Nuevo API_KEY StrikeOne](#nuevo-api_key-strikeone)
+  - [GitHub Actions](#github-actions)
+    - [Desglose:](#desglose)
+  - [Resultado de pipeline](#resultado-de-pipeline)
+  - [Resultado en StrikeOne](#resultado-en-strikeone)
+  - [Lista de vulnerabilidades (visión general):](#lista-de-vulnerabilidades-visión-general)
+- [Priorizando vulnerabilidades](#priorizando-vulnerabilidades)
+
+## Introducción
+
 Dentro del ciclo DevSecOps es importante el uso de un CI/CD para poder agilizar las integraciones y despliegues de un proyecto, pero también es importante tener un nivel de seguridad dentro del código donde se tienen que cumplir ciertos estándares a nivel organizacional como a nivel general del código.
 
 El análisis **SAST**, o bien **"Análisis de código estático"**, son las pruebas de _caja blanca_ del código fuente de la aplicación, es decir que el código no está en tiempo de ejecución.
 
 En StrikeOne es posible realizar este análisis, invocando dentro de un pipeline del CI/CD que esté ocupando tu organización, ya sea; GitHub Actions, GitLab CI/CD, Azure DevOps, Bitbucket pipelines, Jenkins, entre otros...
 
-Herramientas disponibles en StrikeOne
+## Herramientas disponibles en StrikeOne
 
 | Secrets  | SCA                    | SAST               | DAST                       |
 | -------- | ---------------------- | ------------------ | -------------------------- |
@@ -20,27 +41,43 @@ Herramientas disponibles en StrikeOne
 
 ## ¿Cómo ejecutar un test con StrikeOne?
 
+### Login
+
 En primera instancia nos logueamos dentro de StrikeOne con nuestras credenciales.
 ![Login StrikeOne](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_login_26_05_2023.png)
+
+### Lista de Assets
 
 Vamos al módulo ScanOne, apartado Vulnerability Management > Assets
 ![Assets StrikeOne](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_assets_26_05_2023.png)
 
+### Nuevo Asset
+
 Creamos un nuevo Asset (correspondiente a una aplicación)
 ![Nuevo Asset](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_new_asset_26_05_2023.png)
+
+### Ver datalles Asset
 
 Vamos a los "detalles"
 ![Asset Creado](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_asset_list_26_05_2023.png)
 
+### Nuevo dominio
+
 Creamos un nuevo Dominio, que se asociará posteriormente el **Scan**
 ![Nuevo Dominio](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_new_domain_26_05_2023.png)
+
+### Nuevo Scan
 
 Creamos un nuevo Scan, donde se almacenarán los resultados de los tests de seguridad
 ![Nuevo Scan](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_new_scan_26_05_2023.png)
 
+### Nuevo API_KEY StrikeOne
+
 Debemos crear un API_KEY dentro de StrikeOne para acceder al uso de los tests.
 My Account > Integrations > API Tokens
 ![Nueva API KEY StrikeOne](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_new_api_token_26_05_2023.png)
+
+### GitHub Actions
 
 Ahora podemos configurar nuestro pipeline dentro de GitHub Actions:
 
@@ -81,7 +118,7 @@ jobs:
         echo ${{ steps.strikeone_test_execution.outputs.response }}
 ```
 
-### Desglose:
+#### Desglose:
 
 - parsedDomainId: ID perteneciente al dominio ingresado en StrikeOne. ![parsedDomainId](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_id_domain_26_05_2023.png)
 - parsedScanId: ID perteneciente al scan ingresado en StrikeOne. ![parsedScanId](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_id_scan_26_05_2023.png)
@@ -97,13 +134,16 @@ jobs:
 - projectUrl: URL del repositorio (https://github.com/aleHRevirtus/DVWA.git) (https://user:token@github.com/aleHRevirtus/DVWA.git en caso de que el repositorio sea privado)
 - projectName: Nombre del repositorio (DVWA)
 
-Resultado de pipeline:
+### Resultado de pipeline
+
 ![Resultado pipeline](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_success_pipeline_26_05_2023.png)
 
-Resultado en StrikeOne:
+### Resultado en StrikeOne
+
 ![Resultado test en StrikeOne](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_result_test_26_05_2023.png)
 
-Lista de vulnerabilidades (visión general):
+### Lista de vulnerabilidades (visión general):
+
 ![Lista de vulnerabilidades](https://e-virtus.s3.us-east-2.amazonaws.com/blog/analisis_sast_strikeone_list_vulns_25_05_2023.png)
 
 ## Priorizando vulnerabilidades
