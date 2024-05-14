@@ -8,7 +8,7 @@ categories: [Ciberseguridad, Offensive Security, Reconocimiento]
 
 En el proceso de pentesting, el primer paso es comenzar con un reconocimiento, utilizando herramientas externas pasivas o activas.
 
-En el reconocimiento es importante conocer la estructura que tiene el objetivo, este corresponde a la búsqueda de paths validos dentro de un sitio web, utilizando herramientas tipo crawlers, que exploran el sitio web por ti y van ingresando a los enlaces que aparecen en el código, o con herramientas manuales para explorar con listas de palabras como gobuster, wfuzz o dirsearch (Aunque este último también es crawler). Este procedimiento también se utiliza para buscar sub-dominios validos de un objetivo.
+En el reconocimiento es importante conocer la estructura que tiene el objetivo, este corresponde a la búsqueda de paths válidos dentro de un sitio web, utilizando herramientas tipo crawlers, que exploran el sitio web por ti y van ingresando a los enlaces que aparecen en el código, o con herramientas manuales para explorar con listas de palabras como gobuster, wfuzz o dirsearch (Aunque este último también es crawler). Este procedimiento también se utiliza para buscar sub-dominios válidos de un objetivo.
 
 En algunos contextos, puede llegar a ser muy difícil tener una lista de paths o palabras validas, especialmente cuando tu objetivo está en otro idioma que no sea inglés o tiene una estructura de sitio web customizada con o sin palabras compuestas, invalidando la mayoría de los diccionarios diseñados con las palabras más comunes... en ingles.
 
@@ -18,7 +18,7 @@ Para solucionar esta problemática, utilizaremos una herramienta y un script par
 
 ![Crew_1](https://e-virtus.s3.us-east-2.amazonaws.com/624b46a6-be24-408b-b89c-599410a6caaf.png)
 
-CEWL es una herramienta programada en ruby que genera una lista de palabras en base a cuantas veces se repiten dentro de un sitio objetivo, esta herramienta tiene varias opciones a destacar, primero para la **gestión de palabras** existen alternativas como:
+CEWL es una herramienta programada en ruby que genera una lista de palabras con base en cuantas veces se repiten dentro de un sitio objetivo, esta herramienta tiene varias opciones a destacar, primero para la **gestión de palabras** existen alternativas como:
 
 - -m & -x >> Estas opciones sirven para configurar el tamaño mínimo y máximo de las palabras a considerar, respectivamente.
 - --lowercase >> Estandariza todo el output a minúsculas.
