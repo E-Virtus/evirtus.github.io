@@ -72,15 +72,13 @@ Obteniendo una lista de 90 palabras.
 
 Como hemos notado que el sitio web tiene palabras compuestas en su estructura, usaremos un script de Python generar una lista nueva acorde a la estructura del sitio, ya que existe la posibilidad de encontrar partes antiguos y/o interesantes sitios web.
 
-```
 Primero vamos a copiar la lista de palabras y crear un mini diccionario de delimitantes.
 
-cp wordlist.txt mordlist.txt
-
-vi delimiter.txt
 ```
-
+cp wordlist.txt mordlist.txt
+vi delimiter.txt
 python3 /opt/github/combiner.py -W wordlist.txt -M wordlist.txt -d delimiter.txt
+```
 
 Contenido delimiter.txt:
 
@@ -98,63 +96,42 @@ Contenido Combiner.py:
 import argparse
 
 parser = argparse.ArgumentParser()
-
 parser.add_argument('-W','--wordlist', type=str, required=True, help='First wordlist file to combine')
-
 parser.add_argument('-M','--mordlist', type=str, required=True, help='Second wordlist file to combine')
-
 parser.add_argument('-d','--delimiter', type=str, required=True, help='Text file with delimiters to combine')
 
 args = parser.parse_args()
-
 wordlist1 = open(args.wordlist, "r")
-
 list1 = []
 
 for word1 in wordlist1:
-
 list1.append(word1.strip())
-
 wordlist2 = open(args.mordlist, "r")
-
 list2 = []
 
 for word2 in wordlist2:
-
 list2.append(word2.strip())
-
 delimiter = open(args.delimiter, "r")
-
 listlimit = []
 
 for limit in delimiter:
-
 listlimit.append(limit.strip())
-
 newlist = []
 
 for word1 in list1:
-
 for word2 in list2:
-
 for limit in listlimit:
 
 word1 = word1.strip()
-
 word2 = word2.strip()
-
 limit = limit.strip()
-
 newword = word1+limit+word2
-
 print(newword)
-
 newlist.append(newword)
 
 with open(r'output.txt', 'w') as fp:
 
 for items in newlist:
-
 fp.write("%s\n" % items)
 ```
 
@@ -166,13 +143,10 @@ Una vez que ya tenemos todo preparado, vamos a ejecutar **Wfuzz** en este caso, 
 wfuzz --hc=404 -t 200 -c -w /tmp/output.txt <http://localhost:3333/FUZZ.html>
 
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
-
 - Wfuzz 3.1.0 - The Web Fuzzer \*
-
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 
 Target: <http://localhost:3333/FUZZ.html>
-
 Total requests: 24300
 
 \=====================================================================
@@ -182,11 +156,8 @@ ID Response Lines Word Chars Payload
 \=====================================================================
 
 000008744: 200 101 L 435 W 5194 Ch "productos-anticontaminantes"
-
 000008894: 200 101 L 437 W 5196 Ch "productos-celeste"
-
 000009560: 200 101 L 431 W 5160 Ch "portal-pagos"
-
 000009974: 200 101 L 435 W 5190 Ch "pagos-celeste"
 ```
 
