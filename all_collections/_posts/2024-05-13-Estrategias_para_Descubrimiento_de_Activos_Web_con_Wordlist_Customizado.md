@@ -94,9 +94,9 @@ Contenido Combiner.py:
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-W','--wordlist', type=str, required=True, help='First wordlist file to combine')
-parser.add_argument('-M','--mordlist', type=str, required=True, help='Second wordlist file to combine')
-parser.add_argument('-d','--delimiter', type=str, required=True, help='Text file with delimiters to combine')
+parser.add_argument('-W', '--wordlist', type=str, required=True, help='First wordlist file to combine')
+parser.add_argument('-M', '--mordlist', type=str, required=True, help='Second wordlist file to combine')
+parser.add_argument('-d', '--delimiter', type=str, required=True, help='Text file with delimiters to combine')
 
 args = parser.parse_args()
 wordlist1 = open(args.wordlist, "r")
@@ -104,27 +104,30 @@ list1 = []
 
 for word1 in wordlist1:
     list1.append(word1.strip())
-    wordlist2 = open(args.mordlist, "r")
-    list2 = []
+
+wordlist2 = open(args.mordlist, "r")
+list2 = []
 
 for word2 in wordlist2:
     list2.append(word2.strip())
-    delimiter = open(args.delimiter, "r")
-    listlimit = []
+
+delimiter = open(args.delimiter, "r")
+listlimit = []
 
 for limit in delimiter:
     listlimit.append(limit.strip())
-    newlist = []
+
+newlist = []
 
 for word1 in list1:
-for word2 in list2:
-for limit in listlimit:
-    word1 = word1.strip()
-    word2 = word2.strip()
-    limit = limit.strip()
-    newword = word1+limit+word2
-    print(newword)
-    newlist.append(newword)
+    for word2 in list2:
+        for limit in listlimit:
+            word1 = word1.strip()
+            word2 = word2.strip()
+            limit = limit.strip()
+            newword = word1 + limit + word2
+            print(newword)
+            newlist.append(newword)
 
 with open(r'output.txt', 'w') as fp:
     for items in newlist:
