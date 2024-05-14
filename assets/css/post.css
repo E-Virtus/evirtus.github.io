@@ -313,6 +313,7 @@ main a {
   background: var(--gray-3) !important;
   padding: 1rem 1.5rem;
   margin-bottom: 1.75rem;
+  font-size: 14px !important;
 }
 
 .content code {
@@ -320,7 +321,7 @@ main a {
   color: var(--white-2);
   white-space: pre;
   background-color: var(--gray-3);
-  font-size: 14px;
+  font-size: 14px !important;
 }
 
 /* lbox */
