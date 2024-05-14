@@ -103,34 +103,32 @@ wordlist1 = open(args.wordlist, "r")
 list1 = []
 
 for word1 in wordlist1:
-list1.append(word1.strip())
-wordlist2 = open(args.mordlist, "r")
-list2 = []
+    list1.append(word1.strip())
+    wordlist2 = open(args.mordlist, "r")
+    list2 = []
 
 for word2 in wordlist2:
-list2.append(word2.strip())
-delimiter = open(args.delimiter, "r")
-listlimit = []
+    list2.append(word2.strip())
+    delimiter = open(args.delimiter, "r")
+    listlimit = []
 
 for limit in delimiter:
-listlimit.append(limit.strip())
-newlist = []
+    listlimit.append(limit.strip())
+    newlist = []
 
 for word1 in list1:
 for word2 in list2:
 for limit in listlimit:
-
-word1 = word1.strip()
-word2 = word2.strip()
-limit = limit.strip()
-newword = word1+limit+word2
-print(newword)
-newlist.append(newword)
+    word1 = word1.strip()
+    word2 = word2.strip()
+    limit = limit.strip()
+    newword = word1+limit+word2
+    print(newword)
+    newlist.append(newword)
 
 with open(r'output.txt', 'w') as fp:
-
-for items in newlist:
-fp.write("%s\n" % items)
+    for items in newlist:
+        fp.write("%s\n" % items)
 ```
 
 ### Fuzzing
