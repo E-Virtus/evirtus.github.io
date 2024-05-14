@@ -58,8 +58,8 @@ Al explorar, podemos notar que utiliza palabras compuestas en su estructura, est
 
 Primero para obtener una lista de palabras, vamos a utilizar **Cewl.**
 
-```
-cewl -m 5 -d 3 -w wordlist.txt --lowercase http://localhost:3333/
+```py
+cewl -m 5 -d 3 -w wordlist.txt --lowercase "http://localhost:3333/"
 ```
 
 Con un mínimo de 5 caracteres por palabra (-m), un spidering de profundidad 3 (-d) y el output será todo en minúscula (--lowercase) dentro del archivo wordlist.txt (-w)
@@ -74,7 +74,7 @@ Como hemos notado que el sitio web tiene palabras compuestas en su estructura, u
 
 Primero vamos a copiar la lista de palabras y crear un mini diccionario de delimitantes.
 
-```
+```py
 cp wordlist.txt mordlist.txt
 vi delimiter.txt
 python3 /opt/github/combiner.py -W wordlist.txt -M wordlist.txt -d delimiter.txt
@@ -82,17 +82,15 @@ python3 /opt/github/combiner.py -W wordlist.txt -M wordlist.txt -d delimiter.txt
 
 Contenido delimiter.txt:
 
-```
+```py
 .
-
 \-
-
 \_
 ```
 
 Contenido Combiner.py:
 
-```
+```py
 import argparse
 
 parser = argparse.ArgumentParser()
@@ -139,7 +137,7 @@ fp.write("%s\n" % items)
 
 Una vez que ya tenemos todo preparado, vamos a ejecutar **Wfuzz** en este caso, para buscar algún **path** antiguo que sea interesante.
 
-```
+```py
 wfuzz --hc=404 -t 200 -c -w /tmp/output.txt <http://localhost:3333/FUZZ.html>
 
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
