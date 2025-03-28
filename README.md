@@ -6,6 +6,8 @@
 
 ## How to install
 
+0. Ruby versión
+   `ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x64-mingw-ucrt]`
 1. Download or clone the repo
    `git clone https://github.com/sharadcodes/jekyll-theme-serial-programmer.git`
 2. Enter the folder
@@ -23,15 +25,15 @@
 
 ## Alert!
 
-* Don't touch `categories.js` inside `assets/js` folder unless you know what you're doing, it is used for generating links for the particular category pill you click on.
-* You should use github [discussions](https://github.com/sharadcodes/jekyll-theme-serial-programmer/discussions) to ask any question.
-* Don't use issues to ask any question unless you are facing issue related to the theme, jekyll or any file.
+- Don't touch `categories.js` inside `assets/js` folder unless you know what you're doing, it is used for generating links for the particular category pill you click on.
+- You should use github [discussions](https://github.com/sharadcodes/jekyll-theme-serial-programmer/discussions) to ask any question.
+- Don't use issues to ask any question unless you are facing issue related to the theme, jekyll or any file.
 
 ## Asking for support!
 
 Hello everyone, If you have used this theme and if it has helped you in any way or if you just want to support me for my open source work, you can support me by donating any amount.
 
-You can use the sponsor button at the top or on the right. 
+You can use the sponsor button at the top or on the right.
 
 [Github Sponsor Page](https://github.com/sponsors/sharadcodes)
 
