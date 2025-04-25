@@ -7,7 +7,7 @@
 ## How to install
 
 0. Ruby versión
-   `ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x64-mingw-ucrt]`
+   `ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x64-mingw-ucrt] https://rubyinstaller.org/downloads/archives/`
 1. Download or clone the repo
    `git clone https://github.com/sharadcodes/jekyll-theme-serial-programmer.git`
 2. Enter the folder
